@@ -9,62 +9,54 @@
 <meta name="apple-mobile-web-app-title" content="Dams Reprog">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Dams Reprog - Reprogrammation moteur</title>
+<title>Dams Reprog - Performance moteur</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
 body{margin:0;background:#050505;color:white;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-body:before{content:"DAMS REPROG";position:fixed;right:-10vw;bottom:8vh;font-size:9vw;font-weight:1000;color:rgba(255,255,255,.035);transform:rotate(-18deg);pointer-events:none;white-space:nowrap}
+body:before{content:"DAMS REPROG";position:fixed;right:-12vw;bottom:10vh;font-size:10vw;font-weight:1000;color:rgba(255,255,255,.035);transform:rotate(-18deg);pointer-events:none;white-space:nowrap}
 a{text-decoration:none;color:inherit}
-.wrap{max-width:1220px;margin:auto;padding:0 16px;position:relative}
-.topbar{position:sticky;top:0;z-index:40;background:rgba(5,5,5,.92);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px)}
+.wrap{max-width:1360px;margin:auto;padding:0 18px;position:relative}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:30px;font-weight:1000;font-style:italic;letter-spacing:-1px}.logo span{color:#ef4444}
-.menu{display:flex;gap:18px;align-items:center;color:#d1d5db;font-weight:900}.menu a:hover{color:#ef4444}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:15px;background:#ef4444;color:white;font-weight:1000;box-shadow:0 14px 34px rgba(239,68,68,.25)}
-.btn.secondary{background:#111827;border:1px solid rgba(255,255,255,.12);box-shadow:none}
-.btn.blue{background:#2563eb;box-shadow:0 14px 34px rgba(37,99,235,.22)}
-.hero{min-height:720px;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:center;padding:62px 0}
-.badge{display:inline-block;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.35);color:#fecaca;border-radius:999px;padding:9px 14px;font-weight:1000;font-size:13px}
-h1{font-size:64px;line-height:.94;margin:18px 0 18px;letter-spacing:-3px}
-h1 span{color:#ef4444}
-.lead{font-size:20px;color:#cbd5e1;line-height:1.45;max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.heroCard{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:22px;box-shadow:0 28px 90px rgba(0,0,0,.45)}
-.dash{background:radial-gradient(circle at top,#1f2937,#050505);border:1px solid rgba(255,255,255,.12);border-radius:25px;padding:20px;min-height:430px}
-.vehicle{font-size:108px;text-align:right;opacity:.28;filter:grayscale(1)}
-.gauge{height:150px;border-radius:22px;background:linear-gradient(135deg,#111827,#050505);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;margin-top:18px}
-.gauge b{font-size:52px;color:#22c55e}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-.stat{background:#050505;border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:16px;text-align:center}
-.stat b{display:block;font-size:28px;color:#22c55e}.stat small{color:#cbd5e1;text-transform:uppercase;font-size:11px}
-.section{padding:78px 0;border-top:1px solid rgba(255,255,255,.08)}
-.title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px}
-h2{font-size:44px;line-height:1;margin:0}h2 span{color:#ef4444}.muted{color:#cbd5e1;line-height:1.45}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.card{background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);border-radius:25px;padding:24px;min-height:240px;box-shadow:0 18px 55px rgba(0,0,0,.25)}
-.cardIcon{font-size:44px;margin-bottom:12px}.card h3{margin:0 0 10px;font-size:25px}.card p{color:#cbd5e1;line-height:1.45}
-.price{font-size:28px;font-weight:1000;color:#ef4444;margin-top:18px}
-.dynoLink{background:#050505;border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:26px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
-.dynoLink b{font-size:30px}.dynoLink p{color:#cbd5e1}.dynoLink .emoji{font-size:76px;opacity:.75}
-.shop{background:linear-gradient(135deg,#7f1d1d,#111827);border:1px solid rgba(255,255,255,.13);border-radius:30px;padding:36px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
-.shop h2{font-size:48px}.shop p{font-size:18px;color:#fee2e2}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:step}
-.step{background:#080808;border:1px solid rgba(255,255,255,.1);border-radius:23px;padding:21px;position:relative}
-.step:before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#ef4444;font-weight:1000;margin-bottom:12px}
-.models{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.modelPanel{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:26px}
-.modelPanel h3{font-size:30px;margin:0 0 8px}.list{display:grid;gap:8px;margin:16px 0}.list span{background:#050505;border:1px solid rgba(255,255,255,.08);border-radius:13px;padding:10px;color:#d1d5db}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.contactBox{background:#080808;border:1px solid rgba(255,255,255,.1);border-radius:25px;padding:22px}
-.input{min-height:52px;background:#050505;border:1px solid rgba(255,255,255,.12);border-radius:14px;margin:10px 0;padding:15px;color:#94a3b8}
-.footer{padding:40px 0;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08)}
+.logo{font-size:31px;font-weight:1000;font-style:italic;letter-spacing:-1px;line-height:.9}.logo span{color:#ef2029;display:block}
+.menu{display:flex;gap:28px;align-items:center;color:#e5e7eb;font-weight:1000;text-transform:uppercase;font-size:13px}.menu a{padding:28px 0;border-bottom:3px solid transparent}.menu a:hover,.menu a.active{color:#ef2029;border-color:#ef2029}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:8px;background:#ef2029;color:white;font-weight:1000;box-shadow:0 14px 36px rgba(239,32,41,.28);text-transform:uppercase;font-size:13px}
+.btn.secondary{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);box-shadow:none}
+.btn.blue{background:#2563eb;box-shadow:0 14px 36px rgba(37,99,235,.25)}
+.hero{position:relative;min-height:680px;margin:0 calc(50% - 50vw);padding:76px calc(50vw - 50% + 18px) 46px;background:
+linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,.78) 25%,rgba(0,0,0,.72) 72%,rgba(0,0,0,.18)),
+radial-gradient(circle at 50% 30%,rgba(239,32,41,.23),transparent 32%),
+linear-gradient(135deg,#050505,#111 55%,#050505);
+overflow:hidden}
+.hero:before{content:"🏍️";position:absolute;left:3vw;top:95px;font-size:300px;opacity:.18;filter:grayscale(1)}
+.hero:after{content:"🚗";position:absolute;right:4vw;top:130px;font-size:280px;opacity:.18;filter:grayscale(1)}
+.heroInner{position:relative;z-index:2;text-align:center;max-width:1000px;margin:auto}
+.kicker{letter-spacing:.5em;text-transform:uppercase;font-weight:900;color:#f3f4f6;margin-bottom:22px}
+h1{font-size:96px;line-height:.83;margin:0 0 22px;font-style:italic;letter-spacing:-5px;text-transform:uppercase;text-shadow:0 18px 60px rgba(0,0,0,.55)}
+h1 span{display:block;color:#ef2029}
+.heroTitle{font-size:28px;font-weight:700;margin-bottom:10px}.subline{text-transform:uppercase;color:#e5e7eb;letter-spacing:.12em;font-size:14px}
+.heroActions{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.quickCards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:46px auto 0;max-width:960px}
+.quick{background:rgba(0,0,0,.62);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:22px;display:grid;grid-template-columns:auto 1fr;gap:18px;text-align:left;align-items:center;backdrop-filter:blur(6px)}
+.quickIcon{font-size:42px;color:#ef2029}.quick b{font-size:22px}.quick p{color:#d1d5db;margin:6px 0}.quick small{color:#ef2029;font-weight:1000;text-transform:uppercase}
+.section{padding:66px 0;border-top:1px solid rgba(255,255,255,.08)}
+.title{text-align:center;margin-bottom:32px}h2{font-size:34px;line-height:1;margin:0;text-transform:uppercase}h2 span{color:#ef2029}.muted{color:#cbd5e1;line-height:1.45}
+.services{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.service{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:24px;text-align:center;min-height:190px}
+.serviceIcon{font-size:38px;color:#ef2029;margin-bottom:12px}.service h3{font-size:15px;text-transform:uppercase;margin:0 0 8px}.service p{color:#e5e7eb;font-size:13px;line-height:1.45}.service a{color:#ef2029;font-weight:1000;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid rgba(255,255,255,.16);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.025)}
+.stat{padding:24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}.stat:last-child{border-right:0}.statIcon{font-size:34px}.stat b{display:block;color:#ef2029;font-size:32px;margin:8px 0}.stat small{text-transform:uppercase;color:#cbd5e1;font-size:12px}
+.univers{display:grid;grid-template-columns:.9fr 1.1fr 1.1fr;gap:22px;align-items:stretch}
+.textBlock{display:flex;flex-direction:column;justify-content:center}.textBlock small{color:#ef2029;text-transform:uppercase;letter-spacing:.16em;font-weight:1000}.textBlock h2{text-align:left;text-transform:none}.universeCard{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.13);border-radius:16px;min-height:270px;padding:26px;position:relative;overflow:hidden}.universeCard:after{position:absolute;right:-10px;bottom:-35px;font-size:190px;opacity:.16;filter:grayscale(1)}.universeCard.honda:after{content:"🚗"}.universeCard.zontes:after{content:"🏍️"}.universeCard h3{font-size:30px;margin:0 0 10px;text-transform:uppercase}.universeCard h3 span{display:block;color:#ef2029}.list{display:grid;gap:9px;margin:18px 0}.list span{color:#d1d5db}
+.dynoTools{display:grid;grid-template-columns:1fr 1fr;gap:22px}.dynoCard{background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.13);border-radius:16px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}.dynoCard .emoji{font-size:96px;opacity:.25}.dynoCard h3{font-size:30px;margin:0}.dynoCard.honda h3 span{color:#ef2029}.dynoCard.zontes h3 span{color:#3b82f6}
+.shop{background:linear-gradient(135deg,#7f1d1d,#111827);border:1px solid rgba(239,32,41,.45);border-radius:14px;padding:28px 36px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}.shopIcon{font-size:54px;color:#ef2029}.shop h2{text-align:left;text-transform:none}.shop p{color:#fee2e2;font-size:17px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}.step{background:#080808;border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px;text-align:center}.step:before{counter-increment:step;content:counter(step);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;width:44px;height:44px;border-radius:50%;background:#ef2029;font-weight:1000}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contactBox{background:#080808;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px}.input{min-height:52px;background:#050505;border:1px solid rgba(255,255,255,.12);border-radius:12px;margin:10px 0;padding:15px;color:#94a3b8}
+.footer{padding:42px 0;color:#94a3b8;border-top:1px solid rgba(255,255,255,.08)}
 .mobileCta{display:none}
-@media(max-width:900px){
-.menu{display:none}.hero,.grid2,.grid3,.shop,.steps,.models,.contact{grid-template-columns:1fr}
-.hero{min-height:auto;padding:42px 0}h1{font-size:44px}.lead{font-size:18px}h2,.shop h2{font-size:34px}.vehicle{font-size:78px}
-.stats{grid-template-columns:1fr}.nav{height:68px}.mobileCta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:8px;right:8px;bottom:8px;z-index:60;background:rgba(0,0,0,.86);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:8px}
-.mobileCta a{padding:12px;border-radius:12px;text-align:center;font-weight:1000;background:#ef4444}.mobileCta a:last-child{background:#111827;border:1px solid rgba(255,255,255,.12)}
+@media(max-width:980px){
+.menu{display:none}.nav{height:74px}.logo{font-size:28px}.hero{min-height:auto;padding-top:54px}.hero:before,.hero:after{font-size:170px;opacity:.1}h1{font-size:56px}.heroTitle{font-size:21px}.quickCards,.services,.stats,.univers,.dynoTools,.shop,.steps,.contact{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.1)}.stat:last-child{border-bottom:0}.shop{gap:14px}.topbar .btn{display:none}.mobileCta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:8px;right:8px;bottom:8px;z-index:80;background:rgba(0,0,0,.88);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:8px}.mobileCta a{padding:13px;border-radius:12px;text-align:center;font-weight:1000;background:#ef2029}.mobileCta a:last-child{background:#111827;border:1px solid rgba(255,255,255,.12)}
 }
 </style>
 </head>
@@ -73,105 +65,114 @@ h2{font-size:44px;line-height:1;margin:0}h2 span{color:#ef4444}.muted{color:#cbd
   <div class="wrap nav">
     <a class="logo" href="#accueil">DAMS <span>REPROG</span></a>
     <nav class="menu">
+      <a class="active" href="#accueil">Accueil</a>
       <a href="#services">Services</a>
       <a href="#honda">Honda</a>
       <a href="#zontes">Zontes</a>
       <a href="#boutique">Boutique</a>
-      <a href="#dyno">Dyno</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn" href="#contact">Demander un devis</a>
+    <a class="btn" href="#contact">📝 Demander un devis</a>
   </div>
 </header>
 
-<main class="wrap">
+<main>
   <section id="accueil" class="hero">
-    <div>
-      <span class="badge">Reprogrammation • Stage 1 • Stage 2 • E85 • Diagnostic</span>
-      <h1>Performance moteur <span>sur mesure</span></h1>
-      <p class="lead">Dams Reprog optimise votre véhicule avec une approche fiable, claire et mesurable. Auto, moto, Zontes 125, Honda Civic et projets personnalisés.</p>
-      <div class="actions">
-        <a class="btn" href="#contact">Demander un devis</a>
-        <a class="btn secondary" href="#boutique">Boutique</a>
-        <a class="btn blue" href="#dyno">Outils Dyno</a>
+    <div class="heroInner">
+      <div class="kicker">Performance • Fiabilité • Passion</div>
+      <h1>Dams <span>Reprog</span></h1>
+      <div class="heroTitle">Reprogrammation moteur sur mesure</div>
+      <div class="subline">Stage 1 • Stage 2 • E85 • Diagnostic • Optimisation</div>
+      <div class="heroActions">
+        <a class="btn" href="#contact">📝 Demander un devis</a>
+        <a class="btn secondary" href="#boutique">🛒 Boutique</a>
+        <a class="btn secondary" href="https://honda.damsreprog.fr">🚗 Honda Dyno</a>
+        <a class="btn secondary" href="https://dyno.damsreprog.fr">🏍️ Zontes Dyno</a>
       </div>
-    </div>
-    <div class="heroCard">
-      <div class="dash">
-        <span class="badge">Dams Reprog Dashboard</span>
-        <div class="vehicle">🏎️</div>
-        <div class="gauge"><b>+18 ch</b></div>
-        <div class="stats">
-          <div class="stat"><small>Gain</small><b>+18</b></div>
-          <div class="stat"><small>Couple</small><b>+42</b></div>
-          <div class="stat"><small>Stage</small><b>2</b></div>
-        </div>
+      <div class="quickCards">
+        <a class="quick" href="https://honda.damsreprog.fr"><div class="quickIcon">📈</div><div><b>Honda Dyno</b><p>Analysez, comparez et optimisez votre Honda.</p><small>Ouvrir l’outil →</small></div></a>
+        <a class="quick" href="https://dyno.damsreprog.fr"><div class="quickIcon">🏍️</div><div><b>Zontes Dyno</b><p>Analysez, comparez et optimisez votre Zontes.</p><small>Ouvrir l’outil →</small></div></a>
       </div>
     </div>
   </section>
 
-  <section id="services" class="section">
-    <div class="title">
-      <div><h2>Services <span>Dams Reprog</span></h2><p class="muted">Des prestations simples à comprendre et adaptées à chaque projet.</p></div>
-    </div>
-    <div class="grid3">
-      <article class="card"><div class="cardIcon">⚙️</div><h3>Stage 1</h3><p>Optimisation moteur fiable, sans grosse modification mécanique. Idéal pour gagner en couple et agrément.</p><div class="price">Sur devis</div></article>
-      <article class="card"><div class="cardIcon">🔥</div><h3>Stage 2</h3><p>Configuration avancée avec ligne, admission, décata ou pièces adaptées selon véhicule et usage.</p><div class="price">Performance</div></article>
-      <article class="card"><div class="cardIcon">🌱</div><h3>E85</h3><p>Conversion et optimisation éthanol selon compatibilité moteur, avec conseils d'utilisation.</p><div class="price">Économie</div></article>
+  <section id="services" class="section wrap">
+    <div class="title"><h2>Nos prestations</h2></div>
+    <div class="services">
+      <article class="service"><div class="serviceIcon">🧠</div><h3>Reprogrammation</h3><p>Stage 1, Stage 2, E85. Des gains adaptés à vos besoins.</p><a href="#contact">Voir plus →</a></article>
+      <article class="service"><div class="serviceIcon">🔧</div><h3>Diagnostic</h3><p>Lecture défauts, contrôle moteur et analyse complète.</p><a href="#contact">Voir plus →</a></article>
+      <article class="service"><div class="serviceIcon">📈</div><h3>Optimisation</h3><p>Cartographie personnalisée pour des résultats sur mesure.</p><a href="#contact">Voir plus →</a></article>
+      <article class="service"><div class="serviceIcon">🏁</div><h3>Performance</h3><p>Plus de puissance, meilleur couple, fiabilité préservée.</p><a href="#contact">Voir plus →</a></article>
+      <article class="service"><div class="serviceIcon">🛡️</div><h3>Fiabilité</h3><p>Préparations fiables et adaptées à l’usage quotidien.</p><a href="#contact">Voir plus →</a></article>
+      <article class="service"><div class="serviceIcon">🎧</div><h3>Suivi client</h3><p>Accompagnement avant, pendant et après l’intervention.</p><a href="#contact">Voir plus →</a></article>
     </div>
   </section>
 
-  <section id="honda" class="section">
-    <div class="models">
-      <div class="modelPanel">
-        <h3>🚗 Honda Performance</h3>
-        <p class="muted">Suivi des Civic et Type R avec Honda Dyno.</p>
-        <div class="list"><span>FN1 1.8 i-VTEC — 140 ch origine</span><span>FN1 2.2 i-CTDi — 140 ch origine</span><span>EP3 / FN2 / FK2 / FK8 Type R</span><span>Stage 1, Stage 2, E85, décata</span></div>
+  <section class="section wrap">
+    <div class="stats">
+      <div class="stat"><div class="statIcon">🏎️</div><b>2500+</b><small>Véhicules optimisés</small></div>
+      <div class="stat"><div class="statIcon">🏆</div><b>10+</b><small>Années d’expérience</small></div>
+      <div class="stat"><div class="statIcon">📊</div><b>2</b><small>Outils Dyno</small></div>
+      <div class="stat"><div class="statIcon">👥</div><b>100%</b><small>Suivi client</small></div>
+      <div class="stat"><div class="statIcon">📍</div><b>France</b><small>Service à distance</small></div>
+    </div>
+  </section>
+
+  <section id="honda" class="section wrap">
+    <div class="univers">
+      <div class="textBlock">
+        <small>Nos univers</small>
+        <h2>Honda Type R & Zontes 125</h2>
+        <p class="muted">Des solutions dédiées pour chaque machine, avec outils de mesure et rapports personnalisés.</p>
+      </div>
+      <div class="universeCard honda">
+        <h3>Honda <span>Type R</span></h3>
+        <div class="list"><span>FN1 1.8 / FN1 2.2</span><span>EP3 / FN2 / FK2 / FK8</span><span>Stage 1 • Stage 2 • E85 • Décata</span></div>
         <a class="btn" href="https://honda.damsreprog.fr">Ouvrir Honda Dyno</a>
       </div>
-      <div class="modelPanel">
-        <h3>🏍️ Zontes 125</h3>
-        <p class="muted">Outil dédié aux Zontes 125 avec base 14,96 ch origine.</p>
-        <div class="list"><span>Scrambler X, G1, C</span><span>Roadster, Roadster R</span><span>Trail, Hyper Trail, Urban, U, U1, GK</span><span>Stage 1, Stage 2, ligne, filtre</span></div>
+      <div id="zontes" class="universeCard zontes">
+        <h3>Zontes <span>125</span></h3>
+        <div class="list"><span>Scrambler X • G1 • C</span><span>Roadster • Trail • Urban • GK</span><span>Stage 1 • Stage 2 • Ligne • Filtre</span></div>
         <a class="btn blue" href="https://dyno.damsreprog.fr">Ouvrir Zontes Dyno</a>
       </div>
     </div>
   </section>
 
-  <section id="boutique" class="section">
+  <section id="dyno" class="section wrap">
+    <div class="title"><h2>Outils de mesure <span>Dams Reprog</span></h2><p class="muted">Des outils développés pour des résultats fiables et précis.</p></div>
+    <div class="dynoTools">
+      <a class="dynoCard zontes" href="https://dyno.damsreprog.fr"><div><h3><span>Zontes</span> Dyno</h3><p class="muted">Avant/après, Stage 1/2, courbes de puissance, rapports détaillés.</p><span class="btn blue">Ouvrir l’outil</span></div><div class="emoji">🏍️</div></a>
+      <a class="dynoCard honda" href="https://honda.damsreprog.fr"><div><h3><span>Honda</span> Dyno</h3><p class="muted">E85/décata, Stage 1/2, courbes de puissance, rapports détaillés.</p><span class="btn">Ouvrir l’outil</span></div><div class="emoji">🚗</div></a>
+    </div>
+  </section>
+
+  <section id="boutique" class="section wrap">
     <div class="shop">
+      <div class="shopIcon">🛒</div>
       <div>
         <h2>Boutique Dams Reprog</h2>
-        <p>Conserve la boutique IONOS existante : produits, panier, paiement et plugins restent gérés par IONOS.</p>
+        <p>Prestations, accessoires, solutions performance et offres exclusives sélectionnées par Dams Reprog.</p>
       </div>
-      <a class="btn" href="/boutique">Accéder à la boutique</a>
+      <a class="btn" href="/boutique">Accéder à la boutique →</a>
     </div>
   </section>
 
-  <section id="dyno" class="section">
-    <div class="title"><div><h2>Outils Dyno</h2><p class="muted">Applications web Dams Reprog pour mesurer, comparer et générer des rapports.</p></div></div>
-    <div class="grid2">
-      <a class="dynoLink" href="https://dyno.damsreprog.fr"><div><b>Zontes Dyno</b><p>Avant / après, 14,96 ch origine, Stage 1/2, ligne, filtre.</p></div><div class="emoji">🏍️</div></a>
-      <a class="dynoLink" href="https://honda.damsreprog.fr"><div><b>Honda Dyno</b><p>Civic FN1, FN2, EP3, FK2, FK8, E85, décata et Stage 2.</p></div><div class="emoji">🚗</div></a>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="title"><div><h2>Process client</h2><p class="muted">Un parcours clair, de la demande au rapport de performance.</p></div></div>
+  <section class="section wrap">
+    <div class="title"><h2>Notre processus</h2></div>
     <div class="steps">
-      <div class="step"><h3>Contact</h3><p class="muted">Vous indiquez le véhicule et l’objectif.</p></div>
-      <div class="step"><h3>Diagnostic</h3><p class="muted">Contrôle, lecture défauts et compatibilité.</p></div>
-      <div class="step"><h3>Optimisation</h3><p class="muted">Cartographie adaptée à la configuration.</p></div>
-      <div class="step"><h3>Rapport</h3><p class="muted">Résultat, gains et suivi client.</p></div>
+      <div class="step"><h3>Contact</h3><p class="muted">Vous nous contactez avec votre besoin.</p></div>
+      <div class="step"><h3>Diagnostic</h3><p class="muted">Analyse complète de votre véhicule.</p></div>
+      <div class="step"><h3>Reprogrammation</h3><p class="muted">Optimisation sur mesure.</p></div>
+      <div class="step"><h3>Rapport détaillé</h3><p class="muted">Résultats, courbes et gains mesurés.</p></div>
     </div>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact" class="section wrap">
     <div class="contact">
       <div>
         <h2>Contact & devis</h2>
-        <p class="muted">Explique ton projet : véhicule, motorisation, configuration actuelle, objectif souhaité.</p>
-        <div class="actions">
+        <p class="muted">Expliquez votre projet : véhicule, motorisation, configuration actuelle et objectif souhaité.</p>
+        <div class="heroActions">
           <a class="btn" href="mailto:contact@damsreprog.fr">Envoyer un email</a>
           <a class="btn secondary" href="/contact">Formulaire contact</a>
         </div>
