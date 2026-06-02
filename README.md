@@ -1,21 +1,14 @@
-# Dams Reprog - GitPages Premium MAJ
+# Dams Reprog - GitHub Pages V2
 
-Version GitHub Pages mise à jour.
+Version V2 mise à jour.
 
 ## Inclus
-- Accueil premium noir/rouge
-- Services
-- Statistiques
-- Honda / Zontes
-- Outils Dyno
-- Boutique sans message IONOS
-- Contact
-- Responsive iPhone
+- Menu : Accueil, Services, Honda Dyno, Zontes Dyno, Boutique, Contact
+- Résultats observés
+- Avis clients
+- Contact sans adresse ni WhatsApp
+- Formulaire qui ouvre un email vers : damsreprog@gmail.com
+- Bouton Boutique vers : https://n1570928.websitebuilder.online/boutique/
 
-## Upload
-Envoyer tous les fichiers à la racine du dépôt GitHub Pages.
-
-## Liens
-Honda Dyno : https://honda.damsreprog.fr
-Zontes Dyno : https://dyno.damsreprog.fr
-Boutique : /boutique
+## Installation
+Remplacer tous les fichiers du dépôt GitHub Pages par ceux de ce ZIP.
